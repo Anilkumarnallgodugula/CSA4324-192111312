@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>User Login</title>
+<script>
+function redirectToBloodPage(page) {
+    var filePath;
+    if (page === 'login') {
+        filePath = "file:///C:/Users/Vamsi/Documents/anill/Internet%20programing/BLOOD%201.html";
+    } else if (page === 'register') {
+        filePath = "file:///C:/Users/Vamsi/Documents/anill/Internet%20programing/BLOOD%202.html";
+    }
+    window.location.href = filePath;
+}
+</script>
+</head>
+<body>
+
+<h2>User Login</h2>
+
+<form action="login.php" method="post">
+  <label for="username">Username:</label><br>
+  <input type="text" id="username" name="username"><br>
+  <label for="password">Password:</label><br>
+  <input type="password" id="password" name="password"><br><br>
+  <input type="button" value="Login" onclick="redirectToBloodPage('login')">
+  <input type="button" value="Register" onclick="redirectToBloodPage('register')">
+</form>
+
+</body>
+</html>
